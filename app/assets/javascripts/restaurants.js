@@ -59,6 +59,7 @@ var display_restaurant = function (restaurant) {
   var $li1 = $('<li/>').addClass('name');
   var $li2 = $('<li/>').addClass('cuisine');
   var $li3 = $('<li/>').addClass('address');
+  var $li4 = $('<li/>').html('<button class="edit_task button radius success tiny" name="button" type="submit">Edit task</button>');
 
   var $li  = $('<li/>');
   var $ul = $('<ul/>');
@@ -68,7 +69,8 @@ var display_restaurant = function (restaurant) {
     $li2.text(restaurant.cuisine);
     $li3.text(restaurant.address);
 
-    $ul.append([$li0,$li1, $li2, $li3]);
+
+    $ul.append([$li0,$li1, $li2, $li3, $li4 ]);
     $('#restaurants').append($ul);
 
     add_marker(restaurant.latitude, restaurant.longitude, restaurant.name);

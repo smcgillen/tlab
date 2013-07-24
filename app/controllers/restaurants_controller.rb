@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
   before_filter :ensure_logged_in
   def index
-    @restaurants =  Restaurant.all
+    @restaurants =  @auth.restaurants
   end
 
   def create
